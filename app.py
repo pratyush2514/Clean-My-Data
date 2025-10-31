@@ -24,9 +24,6 @@ if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         st.write(df)
 
-        if df.isnull().values.any():
-            st.warning("The Uploaded CSV file contain null values")
-
         # Display basic data summary
         st.subheader("Data Summary")
         st.write("Number of Rows:", df.shape[0])
@@ -59,4 +56,4 @@ if uploaded_file is not None:
         st.write("Unable to load data.")
 
 else:
-    st.warning("Please upload a CSV file Only.")
+    st.warning("Please upload a CSV file.")
